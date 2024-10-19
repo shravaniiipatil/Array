@@ -1,0 +1,47 @@
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+int a[3][3],b[3][3],mult[3][3],r=3,c=3,i,j,k;  
+cout<<"Enter the first matrix element:\n";    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+cin>>a[i][j];  
+}    
+}   
+ 
+cout<<"Enter the second matrix element:\n";    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+cin>>b[i][j];    
+}    
+}    
+
+
+cout<<"\nMultiplication of both the matrix=\n";    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+mult[i][j]=0;    
+for(k=0;k<c;k++)    
+{    
+mult[i][j]+=a[i][k]*b[k][j];    
+}    
+}    
+}    
+   
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+cout<<mult[i][j]<<" ";    
+}    
+cout<<"\n";    
+}    
+return 0;  
+}
